@@ -1,0 +1,27 @@
+# Project configuration
+data_dir: data/incoming
+processed_dir: data/processed
+rejected_dir: data/rejected
+logs_dir: logs
+
+generator:
+  shops: 5                  # number of shops (N)
+  cash_per_shop: 2          # number of cash registers per shop
+  receipts_per_cash: [80, 150]  # min/max receipts per cash
+  lines_per_receipt: [1, 5]     # min/max lines per receipt
+  seed: 42
+
+  # Catalog of items: name, category, price range in local currency
+  items:
+    - {name: "Стиральный порошок", category: "Бытовая химия", price_range: [3.0, 10.0]}
+    - {name: "Гель для стирки", category: "Бытовая химия", price_range: [4.0, 12.0]}
+    - {name: "Кондиционер для белья", category: "Бытовая химия", price_range: [2.5, 8.0]}
+    - {name: "Салфетки", category: "Текстиль", price_range: [1.0, 5.0]}
+    - {name: "Полотенце кухонное", category: "Текстиль", price_range: [2.0, 9.0]}
+    - {name: "Скатерть", category: "Текстиль", price_range: [6.0, 20.0]}
+    - {name: "Сковорода 24см", category: "Посуда", price_range: [12.0, 35.0]}
+    - {name: "Кастрюля 3л", category: "Посуда", price_range: [10.0, 30.0]}
+    - {name: "Набор ножей", category: "Посуда", price_range: [15.0, 50.0]}
+    - {name: "Губки для посуды", category: "Хозтовары", price_range: [0.8, 3.0]}
+    - {name: "Перчатки резиновые", category: "Хозтовары", price_range: [1.0, 4.0]}
+    - {name: "Пакеты для мусора", category: "Хозтовары", price_range: [1.0, 4.0]}
